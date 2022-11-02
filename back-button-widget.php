@@ -3,9 +3,9 @@
 Plugin Name: Back Button Widget
 Plugin URI: https://wpfactory.com/item/back-button-widget-wordpress-plugin/
 Description: Back button widget for WordPress.
-Version: 1.5.3
-Author: Algoritmika Ltd
-Author URI: https://algoritmika.com
+Version: 1.6.0-dev
+Author: WPFactory
+Author URI: https://wpfactory.com
 Text Domain: back-button-widget
 Domain Path: /langs
 */
@@ -28,7 +28,7 @@ if ( 'back-button-widget.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.5.3' );
+defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.6.0-dev-20221102-2122' );
 
 defined( 'ALG_BACK_BUTTON_WIDGET_FILE' ) || define( 'ALG_BACK_BUTTON_WIDGET_FILE', __FILE__ );
 
@@ -40,12 +40,10 @@ if ( ! function_exists( 'alg_back_button_widget' ) ) {
 	 *
 	 * @version 1.0.0
 	 * @since   1.0.0
-	 *
-	 * @todo    [maybe] (dev) `plugins_loaded`?
 	 */
 	function alg_back_button_widget() {
 		return Alg_Back_Button_Widget::instance();
 	}
 }
 
-alg_back_button_widget();
+add_action( 'plugins_loaded', 'alg_back_button_widget' );

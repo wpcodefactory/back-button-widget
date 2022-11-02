@@ -36,6 +36,8 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 	 *
 	 * @param   array $args
 	 * @param   array $instance
+	 *
+	 * @todo    [now] [!!!] (dev) hide title on empty content, e.g. when "hide on front page"
 	 */
 	function widget( $args, $instance ) {
 		// Prepare function args

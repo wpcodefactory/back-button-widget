@@ -1,6 +1,6 @@
 #: includes/alg-back-button-functions.php:45
 #: includes/alg-back-button-functions.php:73
-#: includes/class-alg-back-button-wp-widget.php:81
+#: includes/class-alg-back-button-wp-widget.php:83
 #: includes/pro/class-alg-back-button-widget-pro.php:72
 #: includes/settings/class-alg-back-button-settings.php:335
 msgid "Back"
@@ -24,58 +24,58 @@ msgstr ""
 msgid "Back Button"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:68
+#: includes/class-alg-back-button-wp-widget.php:70
 msgid "Title"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:72
+#: includes/class-alg-back-button-wp-widget.php:74
 msgid "Before button"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:76
+#: includes/class-alg-back-button-wp-widget.php:78
 msgid "After button"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:80
+#: includes/class-alg-back-button-wp-widget.php:82
 msgid "Button label"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:84
+#: includes/class-alg-back-button-wp-widget.php:86
 msgid "Button HTML class"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:85
-#: includes/class-alg-back-button-wp-widget.php:90
+#: includes/class-alg-back-button-wp-widget.php:87
+#: includes/class-alg-back-button-wp-widget.php:92
 #, php-format
 msgid "E.g. try %s"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:89
+#: includes/class-alg-back-button-wp-widget.php:91
 msgid "Button HTML style"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:94
+#: includes/class-alg-back-button-wp-widget.php:96
 msgid "Button type"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:98
+#: includes/class-alg-back-button-wp-widget.php:100
 #: includes/settings/class-alg-back-button-settings.php:278
 msgid "Button"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:99
+#: includes/class-alg-back-button-wp-widget.php:101
 msgid "Simple text"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:103
+#: includes/class-alg-back-button-wp-widget.php:105
 msgid "Button JS function"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:112
+#: includes/class-alg-back-button-wp-widget.php:114
 msgid "Hide on front page"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:116
+#: includes/class-alg-back-button-wp-widget.php:118
 #: includes/settings/class-alg-back-button-settings.php:248
 #: includes/settings/class-alg-back-button-settings.php:301
 #: includes/settings/class-alg-back-button-settings.php:321
@@ -84,7 +84,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:117
+#: includes/class-alg-back-button-wp-widget.php:119
 #: includes/settings/class-alg-back-button-settings.php:249
 #: includes/settings/class-alg-back-button-settings.php:302
 #: includes/settings/class-alg-back-button-settings.php:322
@@ -93,15 +93,15 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:124
+#: includes/class-alg-back-button-wp-widget.php:126
 msgid "Hide on URL param"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:127
+#: includes/class-alg-back-button-wp-widget.php:129
 msgid "Param name"
 msgstr ""
 
-#: includes/class-alg-back-button-wp-widget.php:133
+#: includes/class-alg-back-button-wp-widget.php:135
 msgid "Param value"
 msgstr ""
 
