@@ -3,7 +3,7 @@
 Plugin Name: Back Button Widget
 Plugin URI: https://wpfactory.com/item/back-button-widget-wordpress-plugin/
 Description: Back button widget for WordPress.
-Version: 1.6.0
+Version: 1.6.1
 Author: WPFactory
 Author URI: https://wpfactory.com
 Text Domain: back-button-widget
@@ -28,7 +28,7 @@ if ( 'back-button-widget.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.6.0' );
+defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.6.1' );
 
 defined( 'ALG_BACK_BUTTON_WIDGET_FILE' ) || define( 'ALG_BACK_BUTTON_WIDGET_FILE', __FILE__ );
 

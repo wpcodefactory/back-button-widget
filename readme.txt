@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, algoritmika, anbinder
 Tags: back button widget, back button
 Requires at least: 4.4
-Tested up to: 6.1
-Stable tag: 1.6.0
+Tested up to: 6.2
+Stable tag: 1.6.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,11 @@ You can also style the button, for example output it as a simple text or as a bu
 2. Activate the plugin through the "Plugins" menu in WordPress.
 
 == Changelog ==
+
+= 1.6.1 - 13/04/2023 =
+* Dev - Shortcode - `fa_template` attribute added (defaults to `%icon%`).
+* Dev - Shortcode - Optional `before` and `after` attributes added.
+* Tested up to: 6.2.
 
 = 1.6.0 - 03/11/2022 =
 * Dev - Plugin is initialized on the `plugins_loaded` action now.
