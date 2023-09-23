@@ -1,9 +1,9 @@
 === Back Button Widget ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
+Contributors: wpcodefactory, omardabbas, karzin, anbinder, algoritmika, kousikmukherjeeli
 Tags: back button widget, back button
 Requires at least: 4.4
-Tested up to: 6.2
-Stable tag: 1.6.2
+Tested up to: 6.3
+Stable tag: 1.6.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,10 @@ You can also style the button, for example output it as a simple text or as a bu
 2. Activate the plugin through the "Plugins" menu in WordPress.
 
 == Changelog ==
+
+= 1.6.3 - 23/09/2023 =
+* Update WP plugin logo, banner.
+* Tested up to: 6.3.
 
 = 1.6.2 - 08/08/2023 =
 * Contributors updated.
