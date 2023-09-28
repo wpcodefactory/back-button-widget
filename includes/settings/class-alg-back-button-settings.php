@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - Settings.
  *
- * @version 1.5.3
+ * @version 1.6.4
  * @since   1.3.0
  *
  * @author  Algoritmika Ltd.
@@ -56,16 +56,21 @@ class Alg_Back_Button_Settings {
 	/**
 	 * Options page callback.
 	 *
-	 * @version 1.3.0
+	 * @version 1.6.4
 	 * @since   1.3.0
 	 */
 	function create_admin_page() {
 		$this->options = get_option( 'alg_back_button', array() );
-		echo '<div class="wrap">' . '<h1>' . __( 'Back Button Settings', 'back-button-widget' ) . '</h1>' . '<form method="post" action="options.php">';
-		settings_fields( 'alg_back_button_group' );
-		do_settings_sections( 'alg-back-button-settings' );
-		submit_button();
-		echo '</form>' . '</div>';
+		?><div class="wrap">
+			<h1><?php echo esc_html__( 'Back Button Settings', 'back-button-widget' ); ?></h1>
+			<form method="post" action="options.php">
+				<?php
+				settings_fields( 'alg_back_button_group' );
+				do_settings_sections( 'alg-back-button-settings' );
+				submit_button();
+				?>
+			</form>
+		</div><?php
 	}
 
 	/**

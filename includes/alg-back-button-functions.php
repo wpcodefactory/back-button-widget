@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - Functions.
  *
- * @version 1.6.1
+ * @version 1.6.4
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -14,7 +14,7 @@ if ( ! function_exists( 'alg_back_button' ) ) {
 	/**
 	 * alg_back_button.
 	 *
-	 * @version 1.5.2
+	 * @version 1.6.4
 	 * @since   1.0.0
 	 *
 	 * @todo    [next] (dev) move `$label` param to `$args`
@@ -56,11 +56,11 @@ if ( ! function_exists( 'alg_back_button' ) ) {
 
 			case 'simple':
 				return sprintf( '<a href="javascript:history.%s" class="alg_back_button_simple %s" style="%s">%s</a>',
-					$js_function, $args['class'], $args['style'], $label );
+					$js_function, esc_attr( $args['class'] ), esc_attr( $args['style'] ), wp_kses_post( $label ) );
 
 			default: // 'input'
 				return sprintf( '<input type="button" value="%s" class="alg_back_button_input %s" style="%s" onclick="window.history.%s" />',
-					$label, $args['class'], $args['style'], $js_function );
+					esc_attr( $label ), esc_attr( $args['class'] ), esc_attr( $args['style'] ), $js_function );
 
 		}
 
@@ -71,7 +71,7 @@ if ( ! function_exists( 'alg_back_button_shortcode' ) ) {
 	/**
 	 * alg_back_button_shortcode.
 	 *
-	 * @version 1.6.1
+	 * @version 1.6.4
 	 * @since   1.0.0
 	 *
 	 * @todo    [next] (dev) remove `shortcode_atts()`?
@@ -101,14 +101,14 @@ if ( ! function_exists( 'alg_back_button_shortcode' ) ) {
 
 		if ( ! empty( $atts['fa'] ) ) {
 			// Font Awesome
-			$atts['label'] = str_replace( '%icon%', '<i class="' . $atts['fa'] . '"></i>', $atts['fa_template'] );
+			$atts['label'] = str_replace( '%icon%', '<i class="' . esc_attr( $atts['fa'] ) . '"></i>', wp_kses_post( $atts['fa_template'] ) );
 			$atts['type']  = 'simple';
 		} elseif (
 			! empty( $atts['not_lang_text'] ) && ! empty( $atts['lang'] ) &&
 			( ! defined( 'ICL_LANGUAGE_CODE' ) || ! in_array( strtolower( ICL_LANGUAGE_CODE ), array_map( 'trim', explode( ',', strtolower( $atts['lang'] ) ) ) ) )
 		) {
 			// Language
-			$atts['label'] = $atts['not_lang_text'];
+			$atts['label'] = wp_kses_post( $atts['not_lang_text'] );
 		}
 
 		return ( ( $back_button = alg_back_button( $atts['label'], $atts ) ) ? $atts['before'] . $back_button . $atts['after'] : '' );

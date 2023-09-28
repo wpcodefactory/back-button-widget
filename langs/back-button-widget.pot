@@ -1,301 +1,301 @@
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\alg-back-button-functions.php:48
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\alg-back-button-functions.php:83
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:83
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\pro\class-alg-back-button-widget-pro.php:72
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:335
+#: includes/alg-back-button-functions.php:48
+#: includes/alg-back-button-functions.php:83
+#: includes/class-alg-back-button-wp-widget.php:83
+#: includes/pro/class-alg-back-button-widget-pro.php:72
+#: includes/settings/class-alg-back-button-settings.php:340
 msgid "Back"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-widget.php:146
+#: includes/class-alg-back-button-widget.php:146
 msgid "Settings"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-widget.php:149
+#: includes/class-alg-back-button-widget.php:149
 msgid "Go Pro"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:26
+#: includes/class-alg-back-button-wp-widget.php:26
 msgid "Add back button to your site."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:28
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:49
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:223
+#: includes/class-alg-back-button-wp-widget.php:28
+#: includes/settings/class-alg-back-button-settings.php:49
+#: includes/settings/class-alg-back-button-settings.php:228
 msgid "Back Button"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:70
+#: includes/class-alg-back-button-wp-widget.php:70
 msgid "Title"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:74
+#: includes/class-alg-back-button-wp-widget.php:74
 msgid "Before button"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:78
+#: includes/class-alg-back-button-wp-widget.php:78
 msgid "After button"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:82
+#: includes/class-alg-back-button-wp-widget.php:82
 msgid "Button label"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:86
+#: includes/class-alg-back-button-wp-widget.php:86
 msgid "Button HTML class"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:87
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:92
+#: includes/class-alg-back-button-wp-widget.php:87
+#: includes/class-alg-back-button-wp-widget.php:92
 #, php-format
 msgid "E.g. try %s"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:91
+#: includes/class-alg-back-button-wp-widget.php:91
 msgid "Button HTML style"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:96
+#: includes/class-alg-back-button-wp-widget.php:96
 msgid "Button type"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:100
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:278
+#: includes/class-alg-back-button-wp-widget.php:100
+#: includes/settings/class-alg-back-button-settings.php:283
 msgid "Button"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:101
+#: includes/class-alg-back-button-wp-widget.php:101
 msgid "Simple text"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:105
+#: includes/class-alg-back-button-wp-widget.php:105
 msgid "Button JS function"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:114
+#: includes/class-alg-back-button-wp-widget.php:114
 msgid "Hide on front page"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:118
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:248
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:301
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:321
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:375
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:405
+#: includes/class-alg-back-button-wp-widget.php:118
+#: includes/settings/class-alg-back-button-settings.php:253
+#: includes/settings/class-alg-back-button-settings.php:306
+#: includes/settings/class-alg-back-button-settings.php:326
+#: includes/settings/class-alg-back-button-settings.php:380
+#: includes/settings/class-alg-back-button-settings.php:410
 msgid "No"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:119
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:249
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:302
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:322
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:376
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:406
+#: includes/class-alg-back-button-wp-widget.php:119
+#: includes/settings/class-alg-back-button-settings.php:254
+#: includes/settings/class-alg-back-button-settings.php:307
+#: includes/settings/class-alg-back-button-settings.php:327
+#: includes/settings/class-alg-back-button-settings.php:381
+#: includes/settings/class-alg-back-button-settings.php:411
 msgid "Yes"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:126
+#: includes/class-alg-back-button-wp-widget.php:126
 msgid "Hide on URL param"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:129
+#: includes/class-alg-back-button-wp-widget.php:129
 msgid "Param name"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\class-alg-back-button-wp-widget.php:135
+#: includes/class-alg-back-button-wp-widget.php:135
 msgid "Param value"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:48
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:64
+#: includes/settings/class-alg-back-button-settings.php:48
+#: includes/settings/class-alg-back-button-settings.php:65
 msgid "Back Button Settings"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:219
+#: includes/settings/class-alg-back-button-settings.php:224
 msgid "Widget"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:222
+#: includes/settings/class-alg-back-button-settings.php:227
 #, php-format
 msgid ""
 "The plugin creates \"%s\" widget in %s. You can add and configure it there."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:224
+#: includes/settings/class-alg-back-button-settings.php:229
 msgid "Appearance > Widgets"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:228
+#: includes/settings/class-alg-back-button-settings.php:233
 msgid "Shortcode"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:231
+#: includes/settings/class-alg-back-button-settings.php:236
 #, php-format
 msgid ""
 "You can also add the button anywhere on your site with %s shortcode, e.g.: %s"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:237
+#: includes/settings/class-alg-back-button-settings.php:242
 msgid "Menu Options"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:240
+#: includes/settings/class-alg-back-button-settings.php:245
 msgid "Here you can add the back button to your menu(s)."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:243
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:316
+#: includes/settings/class-alg-back-button-settings.php:248
+#: includes/settings/class-alg-back-button-settings.php:321
 msgid "Enable section"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:256
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:273
+#: includes/settings/class-alg-back-button-settings.php:261
+#: includes/settings/class-alg-back-button-settings.php:278
 msgid "Menu location(s)"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:262
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:273
+#: includes/settings/class-alg-back-button-settings.php:267
+#: includes/settings/class-alg-back-button-settings.php:278
 #, php-format
 msgid "Alternatively you can use the \"%s\" option."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:262
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:267
+#: includes/settings/class-alg-back-button-settings.php:267
+#: includes/settings/class-alg-back-button-settings.php:272
 msgid "Menu(s)"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:263
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:274
+#: includes/settings/class-alg-back-button-settings.php:268
+#: includes/settings/class-alg-back-button-settings.php:279
 #, php-format
 msgid "You can select multiple menus by holding %s key."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:263
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:274
+#: includes/settings/class-alg-back-button-settings.php:268
+#: includes/settings/class-alg-back-button-settings.php:279
 msgid "Ctrl"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:264
+#: includes/settings/class-alg-back-button-settings.php:269
 msgid "Button will be added as the last item in selected menu location(s)."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:275
+#: includes/settings/class-alg-back-button-settings.php:280
 msgid "Button will be added as the last item in selected menu(s)."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:283
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:292
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:334
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:386
+#: includes/settings/class-alg-back-button-settings.php:288
+#: includes/settings/class-alg-back-button-settings.php:297
+#: includes/settings/class-alg-back-button-settings.php:339
+#: includes/settings/class-alg-back-button-settings.php:391
 #, php-format
 msgid "If empty, then the default value will be used: %s."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:287
+#: includes/settings/class-alg-back-button-settings.php:292
 msgid "Item template"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:296
+#: includes/settings/class-alg-back-button-settings.php:301
 msgid "Replace URL"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:304
+#: includes/settings/class-alg-back-button-settings.php:309
 #, php-format
 msgid ""
 "This is an alternative method for adding the back button: add a \"Custom Link"
 "\" to your menu(s) (in %s), and set its \"URL\" to %s."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:305
+#: includes/settings/class-alg-back-button-settings.php:310
 msgid "Appearance > Menus"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:310
+#: includes/settings/class-alg-back-button-settings.php:315
 msgid "Floating Button Options"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:313
+#: includes/settings/class-alg-back-button-settings.php:318
 msgid "Here you can add the back button as a floating button."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:329
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:378
+#: includes/settings/class-alg-back-button-settings.php:334
+#: includes/settings/class-alg-back-button-settings.php:383
 msgid "Label"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:338
+#: includes/settings/class-alg-back-button-settings.php:343
 msgid "Position"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:343
+#: includes/settings/class-alg-back-button-settings.php:348
 msgid "Bottom right"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:344
+#: includes/settings/class-alg-back-button-settings.php:349
 msgid "Bottom left"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:345
+#: includes/settings/class-alg-back-button-settings.php:350
 msgid "Top right"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:346
+#: includes/settings/class-alg-back-button-settings.php:351
 msgid "Top left"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:350
+#: includes/settings/class-alg-back-button-settings.php:355
 msgid "Horizontal margin"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:355
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:365
+#: includes/settings/class-alg-back-button-settings.php:360
+#: includes/settings/class-alg-back-button-settings.php:370
 #, php-format
 msgid "If empty, then the default value will be used: %s px."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:357
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:367
+#: includes/settings/class-alg-back-button-settings.php:362
+#: includes/settings/class-alg-back-button-settings.php:372
 msgid "pixels"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:360
+#: includes/settings/class-alg-back-button-settings.php:365
 msgid "Vertical margin"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:370
+#: includes/settings/class-alg-back-button-settings.php:375
 msgid "Set as shortcode"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:378
+#: includes/settings/class-alg-back-button-settings.php:383
 #, php-format
 msgid "When enabled, \"%s\" option will be ignored."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:388
+#: includes/settings/class-alg-back-button-settings.php:393
 #, php-format
 msgid ""
 "Please note: %s shortcode attribute <strong>must</strong> include %s class."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:393
+#: includes/settings/class-alg-back-button-settings.php:398
 msgid "Font Awesome"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:396
+#: includes/settings/class-alg-back-button-settings.php:401
 #, php-format
 msgid ""
 "If you are not loading Font Awesome anywhere else on your site, and using "
 "icon in the button, e.g. %s, you can load it here."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:400
+#: includes/settings/class-alg-back-button-settings.php:405
 msgid "Load"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:410
+#: includes/settings/class-alg-back-button-settings.php:415
 msgid "URL"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\back-button-widget-pro\includes\settings\class-alg-back-button-settings.php:414
+#: includes/settings/class-alg-back-button-settings.php:419
 #, php-format
 msgid "E.g.: %s"
 msgstr ""
