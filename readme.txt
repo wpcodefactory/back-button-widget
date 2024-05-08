@@ -1,40 +1,130 @@
 === Back Button Widget ===
 Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
-Tags: back button widget, back button
+Tags: back button widget, back button, back, go back
 Requires at least: 4.4
-Tested up to: 6.3
-Stable tag: 1.6.4
+Tested up to: 6.5
+Stable tag: 1.6.5
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Back button widget for WordPress.
+A simple & customizable back button, add it to any WordPress page using shortcode or widget for enhanced user navigation experience and site accessibility.
 
 == Description ==
 
-**Back button widget** is a lightweight plugin that lets you add "Back" button to your WordPress site.
+> “GREAT! WORKS PERFECT AND WONDERFUL SUPPORT: I needed a simple way to allow my clients to go back (BACK TO RESULTS) using my IDX real estate pages. The Back Button worked perfect and was easy to use. The Developer also was very kind to provide me with some additional code to match the rest of my web site colors.” – ⭐⭐⭐⭐⭐ [norwood451](https://wordpress.org/support/topic/great-works-perfect-and-wonderful-support/)
 
-Button can be added via **widget**, `[alg_back_button]` **shortcode** or `echo alg_back_button( 'Back' );` **function**.
+[Main Page](https://wpfactory.com/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Main Page") | [Support Forum](https://wpfactory.com/support/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Support Forum") | [Documentation & How to](https://wpfactory.com/docs/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Documentation & How to")
 
-You can also style the button, for example output it as a simple text or as a button.
 
-### &#127942; Premium Version ###
+Navigating through a website should be smooth sailing, right? 
 
-[Premium plugin version](https://wpfactory.com/item/back-button-widget-wordpress-plugin/) allows you to add "Back" button or link:
+Well, that's where our Back Button plugin steps in. It's all about simplicity and convenience. With just a shortcode or widget, users can add a customizable Back button to their WordPress site, a simple & handy tool for improving navigation and enhancing the user experience, making it smooth for visitors to explore your content and navigate your site easily.
 
-* To the navigation **menu(s)**.
-* As a **floating button**.
+## 🚀 Main Features: FREE Version##
 
-### &#128472; Feedback ###
+### 🚀 Add Back Button Using WordPress Widget ###
 
-* We are open to your suggestions and feedback. Thank you for using or trying out one of our plugins!
-* [Visit plugin site](https://wpfactory.com/item/back-button-widget-wordpress-plugin/).
+As simple as it sounds, you can add & customize your back button with WP Widget, whenever they are supported on your theme (sidebar, header, footer, menu, WooCommerce sidebar, etc).
+
+It comes with multiple options to customize the appearance of your Back button widget:
+
+* Give it a unique title
+* Add text before button
+* Add text after button
+* Change button text (label)
+* Give it a class name (to customize it your own)
+* Change button style (color) using simple HTML styling options
+* Select to make the button type to be a button or simple text
+* Select button JavaScript function to be "back" or "go(-1)"
+
+### 🚀 Add Back Button Using Shortcode or PHP Function ###
+
+If you're more into customizing the button through shortcode, the plugin allows adding the button by using `[alg_back_button]` or `echo alg_back_button( 'Back' );` PHP function.
+
+### 🚀 Font Awesome Support ###
+
+You can include any icon in your back button using simple addition to the shortcode, like `[alg_back_button fa="fas fa-angle-double-left"]`
+
+
+___
+## ❤️ User Testimonials: See What Others Are Saying!##
+
+> “Great plugin with excellent support: This is a “must have” plugin for every WordPress site, thanks to the developer for creating this plugin, and for providing excellent and fast support.” – ⭐⭐⭐⭐⭐ [carsten-lund](https://wordpress.org/support/topic/great-plugin-with-excellent-support-93/)
+
+> “Great Plugin!!!: I had a slight issue that was mainly my own error, but the author responded very quickly and all was resolved on this wonderfully simple and very useful plugin.” – ⭐⭐⭐⭐⭐ [kastenmeier](https://wordpress.org/support/topic/great-plugin-27772/)
+
+> “Great plugin with excellent support: This is a “must have” plugin for every WordPress site, thanks to the developer for creating this plugin, and for providing excellent and fast support.” – ⭐⭐⭐⭐⭐ [carsten-lund](https://wordpress.org/support/topic/great-plugin-with-excellent-support-93/)
+
+> “Awesome plugin: It just works perfect!” – ⭐⭐⭐⭐⭐ [anticosti](https://wordpress.org/support/topic/awesome-plugin-4434/)
+
+## 🏆 Do More: PRO Version##
+
+The premium version of [Back Button Widget](https://wpfactory.com/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme) plugin comes with more features, like:
+
+### 🏆 Add Back Button to WordPress Menus ###
+
+You can add the back button to any menu location (based on your theme options) or your own menus that you've created.
+The options allow you to customize the button & item template for the back button
+
+### 🏆 Add Back Button as Floating Button ###
+
+Add the back function as a floating button anywhere on your page, select from bottom (right & left), and top (right & left) locations where the button should appear.
+
+This comes with basic CSS options to change horizontal & vertical margins.
+
+___
+## 💯 Why WPFactory?##
+
+* **Experience You Can Trust:** Over a decade in the business
+* **Wide Plugin Selection:** Offering 65+ unique and powerful plugins
+* **Highly-Rated Support:** Backed by hundreds of 5-star reviews
+* **Expert Team:** Dedicated developers and technical support at your service
+
+___
+## What's Next? Discover More Plugins by WPFactory ##
+
+WPFactory has a diverse range of plugins tailored to enhance your experience:
+
+* [**Rename Media Files: Improve Your WordPress SEO**](https://wpfactory.com/item/file-renaming-on-upload-wordpress-plugin/ "**Rename Media Files: Improve Your WordPress SEO**"): Enhance SEO and organize media effortlessly with Rename Media Files WordPress Plugin. Fix upload issues, santize & optimize filenames, and improve SEO seamlessly. (**[Free version](https://wordpress.org/plugins/file-renaming-on-upload/ "Free version")**)
+
+* [**Download Plugins and Themes from WordPress**](https://wpfactory.com/item/download-plugins-and-themes-from-dashboard-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Download Plugins and Themes from WordPress**"): Download installed plugins and themes in ZIP files directly from your WordPress admin dashboard, download any or all plugins & themes without FTP or cPanel access (**[Free version](https://wordpress.org/plugins/download-plugins-dashboard/ "Free version")**)
+
+* [**Slugs Manager: Delete Old Permalinks from WordPress Database**](https://wpfactory.com/item/slugs-manager-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Slugs Manager: Delete Old Permalinks from WordPress Database**"): Scan & remove old or outdated slugs (permalinks) in Wordpress, keep your database optimized & your URLs SEO-friendly (**[Free version](https://wordpress.org/plugins/remove-old-slugspermalinks/ "Free version")**)
+
+* [**Automated Order Status Controller for WooCommerce**](https://wpfactory.com/item/order-status-rules-for-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Automated Order Status Controller for WooCommerce**"): Change order statuses programmatically based on a wide range of conditions, like time intervals, user roles and more! (**[Free version](https://wordpress.org/plugins/order-status-rules-for-woocommerce/ "Free version")**)
+
+* [**Custom Order Status for WooCommerce**](https://wpfactory.com/item/order-status-for-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Custom Order Status for WooCommerce**"): Create & manage unlimited number of custom statuses, to reflect your business desires & needs. (**[Free version](https://wordpress.org/plugins/order-status-for-woocommerce/ "Free version")**)
+
+* [**Free Shipping Amount Label & Progress Bar for WooCommerce**](https://wpfactory.com/item/amount-left-free-shipping-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Free Shipping Amount Label & Progress Bar for WooCommerce**"): Encourage higher spending by offering free shipping based on amount, with a progress bar for customers. (**[Free version](https://wordpress.org/plugins/amount-left-free-shipping-woocommerce/ "Free version")**)
 
 == Installation ==
 
-1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the "Plugins" menu in WordPress.
+**Follow these simplified steps to get your plugin up and running:**
+
+**From the WordPress Admin Panel:**
+1. Navigate to “Plugins” > “Add New”.
+2. Use the search bar and find the plugin using the exact name.
+3. Click “Install Now” for the desired plugin.
+4. Once the installation is finished, and click “Activate”.
+
+**Manual Installation Using FTP:**
+1. Download the desired plugin from WordPress.org.
+2. Using your preferred FTP client, upload the entire plugin folder to the /wp-content/plugins/ directory of your WordPress installation.
+3. Go to “Plugins” > “Installed Plugins” in your dashboard and click “Activate”.
+
+**Manual download & upload from the WordPress Admin Panel:**
+1. Download the desired plugin in a ZIP format.
+2. On your site, navigate to “Plugins” > “Add New” and click the “Upload Plugin” button.
+3. Choose the downloaded plugin file and click “Install Now.”
+4. After the installation is complete, click “Activate”.
+
+**Post-Activation:**
+Once activated, access the plugin's settings by navigating to “WooCommerce > Settings” and look for the relevant tab.
 
 == Changelog ==
+
+= 1.6.5 - 08/05/2024 =
+* Tested up to: 6.4.
 
 = 1.6.4 - 28/09/2023 =
 * Dev - Escaping output.
