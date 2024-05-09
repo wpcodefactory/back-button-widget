@@ -85,7 +85,7 @@ final class Alg_Back_Button_Widget {
 	 *
 	 * @see     https://cdnjs.com/libraries/font-awesome
 	 *
-	 * @todo    [next] (dev) `$this->options`?
+	 * @todo    (dev) `$this->options`?
 	 */
 	function fontawesome() {
 		$options = get_option( 'alg_back_button', array() );

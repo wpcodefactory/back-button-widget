@@ -17,14 +17,14 @@ if ( ! function_exists( 'alg_back_button' ) ) {
 	 * @version 1.6.4
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (dev) move `$label` param to `$args`
-	 * @todo    [next] (dev) add `title` param
-	 * @todo    [next] (dev) https://wordpress.org/support/topic/any-way-to-edit-or-use-this-to-add-a-custom-javascript-link/
-	 * @todo    [later] (feature) disable button on "no history"
-	 * @todo    [later] (feature) predefined CSS styles
-	 * @todo    [maybe] (dev) option to output `<button>` (instead of `<input type="button">`)
-	 * @todo    [maybe] (dev) color picker
-	 * @todo    [maybe] (feature) option to enable/disable confirmation (and option for confirmation text)
+	 * @todo    (dev) move `$label` param to `$args`
+	 * @todo    (dev) add `title` param
+	 * @todo    (dev) https://wordpress.org/support/topic/any-way-to-edit-or-use-this-to-add-a-custom-javascript-link/
+	 * @todo    (feature) disable button on "no history"
+	 * @todo    (feature) predefined CSS styles
+	 * @todo    (dev) option to output `<button>` (instead of `<input type="button">`)
+	 * @todo    (dev) color picker
+	 * @todo    (feature) option to enable/disable confirmation (and option for confirmation text)
 	 */
 	function alg_back_button( $label, $args = array() ) {
 
@@ -74,8 +74,8 @@ if ( ! function_exists( 'alg_back_button_shortcode' ) ) {
 	 * @version 1.6.4
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (dev) remove `shortcode_atts()`?
-	 * @todo    [next] (dev) add `fa` to the widget params (and maybe to the function params as well)
+	 * @todo    (dev) remove `shortcode_atts()`?
+	 * @todo    (dev) add `fa` to the widget params (and maybe to the function params as well)
 	 */
 	function alg_back_button_shortcode( $atts ) {
 
@@ -92,7 +92,7 @@ if ( ! function_exists( 'alg_back_button_shortcode' ) ) {
 			'show_on_url_param_value' => '',
 			'lang'                    => '',
 			'not_lang_text'           => '',
-			'fa'                      => '', // e.g. `fas fa-angle-double-left`
+			'fa'                      => '', // e.g., `fas fa-angle-double-left`
 			'fa_template'             => '%icon%',
 			'before'                  => '',
 			'after'                   => '',

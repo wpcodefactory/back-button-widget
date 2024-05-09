@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - WP Widget.
  *
- * @version 1.5.0
+ * @version 1.6.7
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -37,7 +37,7 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 	 * @param   array $args
 	 * @param   array $instance
 	 *
-	 * @todo    [now] [!!!] (dev) hide title on empty content, e.g. when "hide on front page"
+	 * @todo    (dev) hide title on empty content, e.g., when "hide on front page"
 	 */
 	function widget( $args, $instance ) {
 		// Prepare function args
@@ -61,7 +61,7 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 	/**
 	 * get_widget_option_fields.
 	 *
-	 * @version 1.5.0
+	 * @version 1.6.7
 	 * @since   1.0.0
 	 */
 	function get_widget_option_fields() {
@@ -84,12 +84,12 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 			),
 			'button_class' => array(
 				'title'   => __( 'Button HTML class', 'back-button-widget' ) .
-					'. ' . sprintf( __( 'E.g. try %s', 'back-button-widget' ), '<code>button</code>' ),
+					'. ' . sprintf( __( 'E.g., try %s', 'back-button-widget' ), '<code>button</code>' ),
 				'default' => '',
 			),
 			'button_style' => array(
 				'title'   => __( 'Button HTML style', 'back-button-widget' ) .
-					'. ' . sprintf( __( 'E.g. try %s', 'back-button-widget' ), '<code>background-color:red;</code>' ),
+					'. ' . sprintf( __( 'E.g., try %s', 'back-button-widget' ), '<code>background-color:red;</code>' ),
 				'default' => '',
 			),
 			'button_type' => array(
@@ -169,7 +169,7 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 					$field = sprintf( '<select class="' . $widget_option_field['class'] . '" id="%s" name="%s"' . $custom_atts . '>%s</select>',
 						$this->get_field_id( $id ), $this->get_field_name( $id ), $options );
 					break;
-				default: // e.g. 'text'
+				default: // e.g., 'text'
 					$field = sprintf( '<input class="' . $widget_option_field['class'] . '" id="%s" name="%s" type="' . $widget_option_field['type'] . '" value="%s"' . $custom_atts . '>',
 						$this->get_field_id( $id ), $this->get_field_name( $id ), esc_attr( $value ) );
 			}

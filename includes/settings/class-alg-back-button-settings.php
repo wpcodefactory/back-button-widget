@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - Settings.
  *
- * @version 1.6.4
+ * @version 1.6.7
  * @since   1.3.0
  *
  * @author  Algoritmika Ltd.
@@ -30,7 +30,7 @@ class Alg_Back_Button_Settings {
 	 * @version 1.3.0
 	 * @since   1.3.0
 	 *
-	 * @todo    [later] (dev) add "reset settings" link
+	 * @todo    (dev) add "reset settings" link
 	 */
 	function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
@@ -130,7 +130,7 @@ class Alg_Back_Button_Settings {
 					case 'text':
 						$new_input[ $option['id'] ] = wp_kses_post( trim( wp_unslash( $input[ $option['id'] ] ) ) );
 						break;
-					default: // e.g. `select`, `number`, etc.
+					default: // e.g., `select`, `number`, etc.
 						$new_input[ $option['id'] ] = sanitize_text_field( $input[ $option['id'] ] );
 				}
 			}
@@ -144,8 +144,8 @@ class Alg_Back_Button_Settings {
 	 * @version 1.4.0
 	 * @since   1.4.0
 	 *
-	 * @todo    [next] (dev) `multiselect`, `select`: select2
-	 * @todo    [maybe] (dev) `multiselect`, `select`: check if `! empty( $select_options )`?
+	 * @todo    (dev) `multiselect`, `select`: select2
+	 * @todo    (dev) `multiselect`, `select`: check if `! empty( $select_options )`?
 	 */
 	function output( $option ) {
 		$value    = ( isset( $this->options[ $option['id'] ] ) ?
@@ -173,7 +173,7 @@ class Alg_Back_Button_Settings {
 						' name="alg_back_button[' . $option['id'] . ']' . ( $is_multiple ? '[]' : '' ) .
 					'">' . $select_options . '</select>' . $desc_tip;
 				break;
-			default: // e.g. `text`, `number`, etc.
+			default: // e.g., `text`, `number`, etc.
 				$field = '<input' .
 						$class .
 						$style .
@@ -209,13 +209,13 @@ class Alg_Back_Button_Settings {
 	/**
 	 * get_settings.
 	 *
-	 * @version 1.5.3
+	 * @version 1.6.7
 	 * @since   1.4.0
 	 *
-	 * @todo    [next] (desc) `fontawesome`: better desc?
-	 * @todo    [next] (desc) `section_floating_button`: better desc?
-	 * @todo    [maybe] (desc) `section_shortcode`: mention `alg_back_button()` function as well?
-	 * @todo    [maybe] (desc) `menu_replace_url_enabled`: better desc?
+	 * @todo    (desc) `fontawesome`: better desc?
+	 * @todo    (desc) `section_floating_button`: better desc?
+	 * @todo    (desc) `section_shortcode`: mention `alg_back_button()` function as well?
+	 * @todo    (desc) `menu_replace_url_enabled`: better desc?
 	 */
 	function get_settings() {
 		return array(
@@ -398,7 +398,7 @@ class Alg_Back_Button_Settings {
 				'title'    => __( 'Font Awesome', 'back-button-widget' ),
 				'type'     => 'section',
 				'id'       => 'fontawesome',
-				'desc'     => sprintf( __( 'If you are not loading Font Awesome anywhere else on your site, and using icon in the button, e.g. %s, you can load it here.', 'back-button-widget' ),
+				'desc'     => sprintf( __( 'If you are not loading Font Awesome anywhere else on your site, and using icon in the button, e.g., %s, you can load it here.', 'back-button-widget' ),
 					'<code>[alg_back_button fa="fas fa-angle-double-left"]</code>' ),
 			),
 			array(

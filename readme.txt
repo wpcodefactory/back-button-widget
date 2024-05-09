@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmu
 Tags: back button widget, back button, back, go back
 Requires at least: 4.4
 Tested up to: 6.5
-Stable tag: 1.6.6
+Stable tag: 1.6.7
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,7 @@ A simple & customizable back button, add it to any WordPress page using shortcod
 [Main Page](https://wpfactory.com/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Main Page") | [Support Forum](https://wpfactory.com/support/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Support Forum") | [Documentation & How to](https://wpfactory.com/docs/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Documentation & How to")
 
 
-Navigating through a website should be smooth sailing, right? 
+Navigating through a website should be smooth sailing, right?
 
 Well, that's where our Back Button plugin steps in. It's all about simplicity and convenience. With just a shortcode or widget, users can add a customizable Back button to their WordPress site, a simple & handy tool for improving navigation and enhancing the user experience, making it smooth for visitors to explore your content and navigate your site easily.
 
@@ -123,11 +123,17 @@ Once activated, access the plugin's settings by navigating to “WooCommerce > S
 
 == Changelog ==
 
+= 1.6.7 - 09/05/2024 =
+* Dev - PHP 8.2 compatibility - "Creation of dynamic property is deprecated" notice fixed.
+* Dev - Admin settings descriptions updated.
+* Readme.txt - Minor fixes.
+
 = 1.6.6 - 08/05/2024 =
-* Tested up to: 6.5.
+* Fix - `ALG_BACK_BUTTON_WIDGET_VERSION` constant updated.
 
 = 1.6.5 - 08/05/2024 =
-* Tested up to: 6.4.
+* Tested up to: 6.5.
+* Readme.txt - Plugin description, tags updated.
 
 = 1.6.4 - 28/09/2023 =
 * Dev - Escaping output.
@@ -184,7 +190,7 @@ Once activated, access the plugin's settings by navigating to “WooCommerce > S
 * Tested up to: 5.5.
 
 = 1.2.2 - 20/03/2020 =
-* Dev - Shortcodes - `[alg_back_button]` - Language (i.e. translation) attributes (`lang` and `not_lang_text`) added.
+* Dev - Shortcodes - `[alg_back_button]` - Language (i.e., translation) attributes (`lang` and `not_lang_text`) added.
 * Dev - Admin action links text updated.
 
 = 1.2.1 - 03/03/2020 =
