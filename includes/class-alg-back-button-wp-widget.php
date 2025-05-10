@@ -8,7 +8,7 @@
  * @author  Algoritmika Ltd.
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_Back_Button_WP_Widget' ) ) :
 
@@ -25,7 +25,11 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 			'classname'   => 'alg_back_button_wp_widget',
 			'description' => __( 'Add back button to your site.', 'back-button-widget' ),
 		);
-		parent::__construct( $widget_ops['classname'], __( 'Back Button', 'back-button-widget' ), $widget_ops );
+		parent::__construct(
+			$widget_ops['classname'],
+			__( 'Back Button', 'back-button-widget' ),
+			$widget_ops
+		);
 	}
 
 	/**
@@ -40,6 +44,7 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 	 * @todo    (dev) hide title on empty content, e.g., when "hide on front page"
 	 */
 	function widget( $args, $instance ) {
+
 		// Prepare function args
 		$function_args = $instance;
 		$function_args['label']   = $instance['button_label'];
@@ -47,15 +52,21 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 		$function_args['style']   = $instance['button_style'];
 		$function_args['type']    = $instance['button_type'];
 		$function_args['js_func'] = $instance['button_js_func'];
+
 		// HTML
 		$html = '';
 		$html .= $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
-			$html .= $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+			$html .= $args['before_title'] .
+				apply_filters( 'widget_title', $instance['title'] ) .
+			$args['after_title'];
 		}
-		$html .= $instance['before_button'] . alg_back_button( $function_args['label'], $function_args ) . $instance['after_button'];
+		$html .= $instance['before_button'] .
+			alg_back_button( $function_args['label'], $function_args ) .
+		$instance['after_button'];
 		$html .= $args['after_widget'];
 		echo $html;
+
 	}
 
 	/**
@@ -84,12 +95,20 @@ class Alg_Back_Button_WP_Widget extends WP_Widget {
 			),
 			'button_class' => array(
 				'title'   => __( 'Button HTML class', 'back-button-widget' ) .
-					'. ' . sprintf( __( 'E.g., try %s', 'back-button-widget' ), '<code>button</code>' ),
+					'. ' . sprintf(
+						/* Translators: %s: HTML class example. */
+						__( 'E.g., try %s', 'back-button-widget' ),
+						'<code>button</code>'
+					),
 				'default' => '',
 			),
 			'button_style' => array(
 				'title'   => __( 'Button HTML style', 'back-button-widget' ) .
-					'. ' . sprintf( __( 'E.g., try %s', 'back-button-widget' ), '<code>background-color:red;</code>' ),
+					'. ' . sprintf(
+						/* Translators: %s: HTML style example. */
+						__( 'E.g., try %s', 'back-button-widget' ),
+						'<code>background-color:red;</code>'
+					),
 				'default' => '',
 			),
 			'button_type' => array(

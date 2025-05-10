@@ -3,11 +3,13 @@
 Plugin Name: Back Button Widget
 Plugin URI: https://wpfactory.com/item/back-button-widget-wordpress-plugin/
 Description: Back button widget for WordPress.
-Version: 1.6.8
+Version: 1.7.0
 Author: WPFactory
 Author URI: https://wpfactory.com
 Text Domain: back-button-widget
 Domain Path: /langs
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 defined( 'ABSPATH' ) || exit;
@@ -22,17 +24,20 @@ if ( 'back-button-widget.php' === basename( __FILE__ ) ) {
 	$plugin = 'back-button-widget-pro/back-button-widget-pro.php';
 	if (
 		in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
-		( is_multisite() && array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) ) )
+		(
+			is_multisite() &&
+			array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) )
+		)
 	) {
 		return;
 	}
 }
 
-defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.6.8' );
+defined( 'ALG_BACK_BUTTON_WIDGET_VERSION' ) || define( 'ALG_BACK_BUTTON_WIDGET_VERSION', '1.7.0' );
 
 defined( 'ALG_BACK_BUTTON_WIDGET_FILE' ) || define( 'ALG_BACK_BUTTON_WIDGET_FILE', __FILE__ );
 
-require_once( 'includes/class-alg-back-button-widget.php' );
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-alg-back-button-widget.php';
 
 if ( ! function_exists( 'alg_back_button_widget' ) ) {
 	/**

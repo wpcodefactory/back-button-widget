@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - Settings.
  *
- * @version 1.6.7
+ * @version 1.7.0
  * @since   1.3.0
  *
  * @author  Algoritmika Ltd.
@@ -10,7 +10,7 @@
  * @see     https://codex.wordpress.org/Creating_Options_Pages
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_Back_Button_Settings' ) ) :
 
@@ -40,17 +40,23 @@ class Alg_Back_Button_Settings {
 	/**
 	 * Add options page (under "Settings").
 	 *
-	 * @version 1.3.0
+	 * @version 1.7.0
 	 * @since   1.3.0
 	 */
 	function add_plugin_page() {
-		add_options_page(
+
+		$admin_menu = WPFactory\WPFactory_Admin_Menu\WPFactory_Admin_Menu::get_instance();
+
+		add_submenu_page(
+			$admin_menu->get_menu_slug(),
 			__( 'Back Button Settings', 'back-button-widget' ),
 			__( 'Back Button', 'back-button-widget' ),
 			'manage_options',
 			'alg-back-button-settings',
-			array( $this, 'create_admin_page' )
+			array( $this, 'create_admin_page' ),
+			30
 		);
+
 	}
 
 	/**
@@ -141,28 +147,43 @@ class Alg_Back_Button_Settings {
 	/**
 	 * output.
 	 *
-	 * @version 1.4.0
+	 * @version 1.7.0
 	 * @since   1.4.0
 	 *
 	 * @todo    (dev) `multiselect`, `select`: select2
 	 * @todo    (dev) `multiselect`, `select`: check if `! empty( $select_options )`?
 	 */
 	function output( $option ) {
-		$value    = ( isset( $this->options[ $option['id'] ] ) ?
-			( is_array( $this->options[ $option['id'] ] ) ? array_map( 'esc_attr', $this->options[ $option['id'] ] ) : esc_attr( $this->options[ $option['id'] ] ) ) :
-			$option['default'] );
+
+		$value    = (
+			isset( $this->options[ $option['id'] ] ) ?
+			(
+				is_array( $this->options[ $option['id'] ] ) ?
+				array_map( 'esc_attr', $this->options[ $option['id'] ] ) :
+				esc_attr( $this->options[ $option['id'] ] )
+			) :
+			$option['default']
+		);
 		$style    = ( isset( $option['css'] )       ? ' style="' . $option['css']   . '"' : '' );
 		$class    = ( isset( $option['class'] )     ? ' class="' . $option['class'] . '"' : '' );
 		$atts     = ( isset( $option['atts'] )      ? ' ' . $option['atts']               : '' );
 		$desc_tip = ( isset( $option['desc_tip'] )  ? ' ' . $option['desc_tip']           : '' );
+
 		switch ( $option['type'] ) {
+
 			case 'select':
 			case 'multiselect':
 				$is_multiple    = ( 'multiselect' === $option['type'] );
 				$select_options = '';
 				foreach ( $option['options'] as $id => $title ) {
-					$selected = ( $is_multiple ? selected( in_array( $id, $value ), true, false ) : selected( $value, $id, false ) );
-					$select_options .= '<option value="' . $id . '"' . $selected . '>' . $title . '</option>';
+					$selected = (
+						$is_multiple ?
+						selected( in_array( $id, $value ), true, false ) :
+						selected( $value, $id, false )
+					);
+					$select_options .= '<option value="' . $id . '"' . $selected . '>' .
+						$title .
+					'</option>';
 				}
 				$field = '<select' .
 						( $is_multiple ? ' multiple' : '' ) .
@@ -173,6 +194,7 @@ class Alg_Back_Button_Settings {
 						' name="alg_back_button[' . $option['id'] . ']' . ( $is_multiple ? '[]' : '' ) .
 					'">' . $select_options . '</select>' . $desc_tip;
 				break;
+
 			default: // e.g., `text`, `number`, etc.
 				$field = '<input' .
 						$class .
@@ -183,24 +205,38 @@ class Alg_Back_Button_Settings {
 						' name="alg_back_button[' . $option['id'] . ']"' .
 						' value="' . $value . '"' .
 					' />' . $desc_tip;
+
 		}
+
 		echo $field;
+
 		if ( isset( $option['desc'] ) && '' !== $option['desc'] ) {
-			$desc_style = ( isset( $option['desc_css'] ) ? ' style="' . $option['desc_css'] . '"' : '' );
-			echo '<p' . $desc_style . '>' . $option['desc'] . '</p>';
+			$desc_style = (
+				isset( $option['desc_css'] ) ?
+				' style="' . esc_attr( $option['desc_css'] ) . '"' :
+				''
+			);
+			echo '<p' . $desc_style . '>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				wp_kses_post( $option['desc'] ) .
+			'</p>';
 		}
+
 	}
 
 	/**
 	 * section_desc.
 	 *
-	 * @version 1.4.0
+	 * @version 1.7.0
 	 * @since   1.4.0
 	 */
 	function section_desc( $section ) {
 		foreach ( $this->get_settings() as $option ) {
-			if ( 'section' === $option['type'] && $section['id'] === 'alg_back_button_section_' . $option['id'] && isset( $option['desc'] ) && '' !== $option['desc'] ) {
-				echo '<p>' . $option['desc'] . '</p>';
+			if (
+				'section' === $option['type'] &&
+				$section['id'] === 'alg_back_button_section_' . $option['id'] &&
+				isset( $option['desc'] ) && '' !== $option['desc']
+			) {
+				echo '<p>' . wp_kses_post( $option['desc'] ) . '</p>';
 				break;
 			}
 		}
@@ -209,7 +245,7 @@ class Alg_Back_Button_Settings {
 	/**
 	 * get_settings.
 	 *
-	 * @version 1.6.7
+	 * @version 1.7.0
 	 * @since   1.4.0
 	 *
 	 * @todo    (desc) `fontawesome`: better desc?
@@ -224,18 +260,28 @@ class Alg_Back_Button_Settings {
 				'title'    => __( 'Widget', 'back-button-widget' ),
 				'type'     => 'section',
 				'id'       => 'widget',
-				'desc'     => sprintf( __( 'The plugin creates "%s" widget in %s. You can add and configure it there.', 'back-button-widget' ),
+				'desc'     => sprintf(
+					/* Translators: %1$s: Widget name, %2$s: Link. */
+					__( 'The plugin creates "%1$s" widget in %2$s. You can add and configure it there.', 'back-button-widget' ),
 					__( 'Back Button', 'back-button-widget' ),
-					'<a target="_blank" href="' . admin_url( 'widgets.php' ) . '">' . __( 'Appearance > Widgets', 'back-button-widget' ) . '</a>' ),
+					'<a target="_blank" href="' . admin_url( 'widgets.php' ) . '">' .
+						__( 'Appearance > Widgets', 'back-button-widget' ) .
+					'</a>'
+				),
 			),
 			// Shortcode section
 			array(
 				'title'    => __( 'Shortcode', 'back-button-widget' ),
 				'type'     => 'section',
 				'id'       => 'shortcode',
-				'desc'     => sprintf( __( 'You can also add the button anywhere on your site with %s shortcode, e.g.: %s', 'back-button-widget' ),
+				'desc'     => sprintf(
+					/* Translators: %1$s: Shortcode name, %2$s: Shortcode example. */
+					__( 'You can also add the button anywhere on your site with %1$s shortcode, e.g.: %2$s', 'back-button-widget' ),
 					'<code>[alg_back_button]</code>',
-					'<pre style="color:#444444;background-color:#e0e0e0;padding:10px;">[alg_back_button label="Go back"]</pre>' ),
+					'<pre style="color:#444444;background-color:#e0e0e0;padding:10px;">' .
+						'[alg_back_button label="Go back"]' .
+					'</pre>'
+				),
 			),
 			// Menu Options section
 			array(
@@ -264,9 +310,21 @@ class Alg_Back_Button_Settings {
 				'type'     => 'multiselect',
 				'class'    => 'widefat',
 				'options'  => get_registered_nav_menus(),
-				'desc'     => sprintf( __( 'Alternatively you can use the "%s" option.', 'back-button-widget' ), __( 'Menu(s)', 'back-button-widget' ) ) . '<br>' .
-					sprintf( __( 'You can select multiple menus by holding %s key.', 'back-button-widget' ), '<code>' . __( 'Ctrl', 'back-button-widget' ) . '</code>' ) . '<br>' .
-					__( 'Button will be added as the last item in selected menu location(s).', 'back-button-widget' ),
+				'desc'     => (
+					sprintf(
+						/* Translators: %s: Option name. */
+						__( 'Alternatively you can use the "%s" option.', 'back-button-widget' ),
+						__( 'Menu(s)', 'back-button-widget' )
+					) .
+					'<br>' .
+					sprintf(
+						/* Translators: %s: Key name. */
+						__( 'You can select multiple menus by holding %s key.', 'back-button-widget' ),
+						'<code>' . __( 'Ctrl', 'back-button-widget' ) . '</code>'
+					) .
+					'<br>' .
+					__( 'Button will be added as the last item in selected menu location(s).', 'back-button-widget' )
+				),
 			),
 			array(
 				'title'    => __( 'Menu(s)', 'back-button-widget' ),
@@ -274,10 +332,22 @@ class Alg_Back_Button_Settings {
 				'default'  => array(),
 				'type'     => 'multiselect',
 				'class'    => 'widefat',
-				'options'  => array_combine( wp_list_pluck( wp_get_nav_menus(), 'term_id' ), wp_list_pluck( wp_get_nav_menus(), 'name' ) ),
-				'desc'     => sprintf( __( 'Alternatively you can use the "%s" option.', 'back-button-widget' ), __( 'Menu location(s)', 'back-button-widget' ) ) . '<br>' .
-					sprintf( __( 'You can select multiple menus by holding %s key.', 'back-button-widget' ), '<code>' . __( 'Ctrl', 'back-button-widget' ) . '</code>' ) . '<br>' .
-					__( 'Button will be added as the last item in selected menu(s).', 'back-button-widget' ),
+				'options'  => wp_list_pluck( wp_get_nav_menus(), 'name', 'term_id' ),
+				'desc'     => (
+					sprintf(
+						/* Translators: %s: Option name. */
+						__( 'Alternatively you can use the "%s" option.', 'back-button-widget' ),
+						__( 'Menu location(s)', 'back-button-widget' )
+					) .
+					'<br>' .
+					sprintf(
+						/* Translators: %s: Key name. */
+						__( 'You can select multiple menus by holding %s key.', 'back-button-widget' ),
+						'<code>' . __( 'Ctrl', 'back-button-widget' ) . '</code>'
+					) .
+					'<br>' .
+					__( 'Button will be added as the last item in selected menu(s).', 'back-button-widget' )
+				),
 			),
 			array(
 				'title'    => __( 'Button', 'back-button-widget' ),
@@ -285,8 +355,11 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
-					'<code>' . esc_html( '[alg_back_button label="Back" type="simple"]' ) . '</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Shortcode. */
+					__( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
+					'<code>' . esc_html( '[alg_back_button label="Back" type="simple"]' ) . '</code>'
+				),
 			),
 			array(
 				'title'    => __( 'Item template', 'back-button-widget' ),
@@ -294,8 +367,11 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
-					'<code>' . esc_html( '<li>%button%<li>' ) . '</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Item template. */
+					__( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
+					'<code>' . esc_html( '<li>%button%<li>' ) . '</code>'
+				),
 			),
 			array(
 				'title'    => __( 'Replace URL', 'back-button-widget' ),
@@ -306,9 +382,12 @@ class Alg_Back_Button_Settings {
 					'no'  => __( 'No', 'back-button-widget' ),
 					'yes' => __( 'Yes', 'back-button-widget' ),
 				),
-				'desc'     => sprintf( __( 'This is an alternative method for adding the back button: add a "Custom Link" to your menu(s) (in %s), and set its "URL" to %s.', 'back-button-widget' ),
+				'desc'     => sprintf(
+					/* Translators: %1$s: Link, %2$s: URL value. */
+					__( 'This is an alternative method for adding the back button: add a "Custom Link" to your menu(s) (in %1$s), and set its "URL" to %2$s.', 'back-button-widget' ),
 					'<a target="_blank" href="' . admin_url( 'nav-menus.php' ) . '">' . __( 'Appearance > Menus', 'back-button-widget' ) . '</a>',
-					'<code>' . esc_html( '[ALG_BACK_BUTTON]' ) . '</code>' ),
+					'<code>' . esc_html( '[ALG_BACK_BUTTON]' ) . '</code>'
+				),
 			),
 			// Floating Button Options section
 			array(
@@ -336,8 +415,11 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
-					'<code>' . esc_html( __( 'Back', 'back-button-widget' ) ) . '</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Label text. */
+					__( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
+					'<code>' . esc_html( __( 'Back', 'back-button-widget' ) ) . '</code>'
+				),
 			),
 			array(
 				'title'    => __( 'Position', 'back-button-widget' ),
@@ -357,8 +439,11 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'number',
 				'atts'     => 'min="0"',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s px.', 'back-button-widget' ),
-					'<code>' . '40' . '</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Number of pixels. */
+					__( 'If empty, then the default value will be used: %s px.', 'back-button-widget' ),
+					'<code>' . '40' . '</code>'
+				),
 				'desc_tip' => __( 'pixels', 'back-button-widget' ),
 			),
 			array(
@@ -367,8 +452,11 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'number',
 				'atts'     => 'min="0"',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s px.', 'back-button-widget' ),
-					'<code>' . '40' . '</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Number of pixels. */
+					__( 'If empty, then the default value will be used: %s px.', 'back-button-widget' ),
+					'<code>' . '40' . '</code>'
+				),
 				'desc_tip' => __( 'pixels', 'back-button-widget' ),
 			),
 			array(
@@ -380,7 +468,11 @@ class Alg_Back_Button_Settings {
 					'no'  => __( 'No', 'back-button-widget' ),
 					'yes' => __( 'Yes', 'back-button-widget' ),
 				),
-				'desc'     => sprintf( __( 'When enabled, "%s" option will be ignored.', 'back-button-widget' ), __( 'Label', 'back-button-widget' ) ),
+				'desc'     => sprintf(
+					/* Translators: %s: Option name. */
+					__( 'When enabled, "%s" option will be ignored.', 'back-button-widget' ),
+					__( 'Label', 'back-button-widget' )
+				),
 			),
 			array(
 				'title'    => '',
@@ -388,18 +480,31 @@ class Alg_Back_Button_Settings {
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
-				'desc'     => sprintf( __( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
-						'<code>' . esc_html( '[alg_back_button label="Back" type="button" class="alg_back_button_floating"]' ) . '</code>' ) . '<br>' .
-					sprintf( __( 'Please note: %s shortcode attribute <strong>must</strong> include %s class.', 'back-button-widget' ),
-						'<code>class</code>', '<code>alg_back_button_floating</code>' ),
+				'desc'     => (
+					sprintf(
+						/* Translators: %s: Shortcode. */
+						__( 'If empty, then the default value will be used: %s.', 'back-button-widget' ),
+						'<code>' . esc_html( '[alg_back_button label="Back" type="button" class="alg_back_button_floating"]' ) . '</code>'
+					) .
+					'<br>' .
+					sprintf(
+						/* Translators: %1$s: Attribute name, %2$s: Class name. */
+						__( 'Please note: %1$s shortcode attribute <strong>must</strong> include %2$s class.', 'back-button-widget' ),
+						'<code>class</code>',
+						'<code>alg_back_button_floating</code>'
+					)
+				),
 			),
 			// Font Awesome section
 			array(
 				'title'    => __( 'Font Awesome', 'back-button-widget' ),
 				'type'     => 'section',
 				'id'       => 'fontawesome',
-				'desc'     => sprintf( __( 'If you are not loading Font Awesome anywhere else on your site, and using icon in the button, e.g., %s, you can load it here.', 'back-button-widget' ),
-					'<code>[alg_back_button fa="fas fa-angle-double-left"]</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: Shortcode example. */
+					__( 'If you are not loading Font Awesome anywhere else on your site, and using icon in the button, e.g., %s, you can load it here.', 'back-button-widget' ),
+					'<code>[alg_back_button fa="fas fa-angle-double-left"]</code>'
+				),
 			),
 			array(
 				'title'    => __( 'Load', 'back-button-widget' ),
@@ -416,7 +521,11 @@ class Alg_Back_Button_Settings {
 				'id'       => 'fontawesome_url',
 				'default'  => '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
 				'type'     => 'text',
-				'desc'     => sprintf( __( 'E.g.: %s', 'back-button-widget' ), '<code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css</code>' ),
+				'desc'     => sprintf(
+					/* Translators: %s: URL example. */
+					__( 'E.g.: %s', 'back-button-widget' ),
+					'<code>//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css</code>'
+				),
 				'css'      => 'width:100%;',
 			),
 		);

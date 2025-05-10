@@ -2,7 +2,7 @@
 /**
  * Back Button Widget - Main Class.
  *
- * @version 1.5.3
+ * @version 1.7.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -49,19 +49,24 @@ final class Alg_Back_Button_Widget {
 	/**
 	 * Alg_Back_Button_Widget Constructor.
 	 *
-	 * @version 1.5.3
+	 * @version 1.7.0
 	 * @since   1.0.0
 	 *
 	 * @access  public
 	 */
 	function __construct() {
 
+		// Load libs
+		if ( is_admin() ) {
+			require_once plugin_dir_path( ALG_BACK_BUTTON_WIDGET_FILE ) . 'vendor/autoload.php';
+		}
+
 		// Set up localisation
 		add_action( 'init', array( $this, 'localize' ) );
 
 		// Pro
 		if ( 'back-button-widget-pro.php' === basename( ALG_BACK_BUTTON_WIDGET_FILE ) ) {
-			require_once( 'pro/class-alg-back-button-widget-pro.php' );
+			require_once plugin_dir_path( __FILE__ ) . 'pro/class-alg-back-button-widget-pro.php';
 		}
 
 		// Include required files
@@ -80,7 +85,7 @@ final class Alg_Back_Button_Widget {
 	/**
 	 * fontawesome.
 	 *
-	 * @version 1.5.3
+	 * @version 1.7.0
 	 * @since   1.5.3
 	 *
 	 * @see     https://cdnjs.com/libraries/font-awesome
@@ -89,8 +94,12 @@ final class Alg_Back_Button_Widget {
 	 */
 	function fontawesome() {
 		$options = get_option( 'alg_back_button', array() );
-		if ( ! empty( $options['fontawesome_enabled'] ) && 'yes' === $options['fontawesome_enabled'] && ! empty( $options['fontawesome_url'] ) ) {
-			?><link rel="stylesheet" href="<?php echo $options['fontawesome_url']; ?>" crossorigin="anonymous" referrerpolicy="no-referrer" /><?php
+		if (
+			! empty( $options['fontawesome_enabled'] ) &&
+			'yes' === $options['fontawesome_enabled'] &&
+			! empty( $options['fontawesome_url'] )
+		) {
+			?><link rel="stylesheet" href="<?php echo esc_url( $options['fontawesome_url'] ); ?>" crossorigin="anonymous" referrerpolicy="no-referrer" /><?php // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet
 		}
 	}
 
@@ -101,41 +110,52 @@ final class Alg_Back_Button_Widget {
 	 * @since   1.3.0
 	 */
 	function localize() {
-		load_plugin_textdomain( 'back-button-widget', false, dirname( plugin_basename( ALG_BACK_BUTTON_WIDGET_FILE ) ) . '/langs/' );
+		load_plugin_textdomain(
+			'back-button-widget',
+			false,
+			dirname( plugin_basename( ALG_BACK_BUTTON_WIDGET_FILE ) ) . '/langs/'
+		);
 	}
 
 	/**
 	 * Include required core files used in admin and on the frontend.
 	 *
-	 * @version 1.5.0
+	 * @version 1.7.0
 	 * @since   1.0.0
 	 */
 	function includes() {
-		require_once( 'alg-back-button-functions.php' );
-		require_once( 'class-alg-back-button-wp-widget.php' );
+		require_once plugin_dir_path( __FILE__ ) . 'alg-back-button-functions.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-back-button-wp-widget.php';
 	}
 
 	/**
 	 * admin.
 	 *
-	 * @version 1.5.0
+	 * @version 1.7.0
 	 * @since   1.2.1
 	 */
 	function admin() {
+
 		// Settings
-		require_once( 'settings/class-alg-back-button-settings.php' );
+		require_once plugin_dir_path( __FILE__ ) . 'settings/class-alg-back-button-settings.php';
+
 		// Action links
 		add_filter( 'plugin_action_links_' . plugin_basename( ALG_BACK_BUTTON_WIDGET_FILE ), array( $this, 'action_links' ) );
+
+		// "Recommendations" page
+		add_action( 'init', array( $this, 'add_cross_selling_library' ) );
+
 		// Version update
 		if ( get_option( 'alg_back_button_widget_version', '' ) !== $this->version ) {
 			add_action( 'admin_init', array( $this, 'version_updated' ) );
 		}
+
 	}
 
 	/**
 	 * action_links.
 	 *
-	 * @version 1.5.0
+	 * @version 1.7.0
 	 * @since   1.2.1
 	 *
 	 * @param   mixed $links
@@ -143,12 +163,36 @@ final class Alg_Back_Button_Widget {
 	 */
 	function action_links( $links ) {
 		$custom_links = array();
-		$custom_links[] = '<a href="' . admin_url( 'options-general.php?page=alg-back-button-settings' ) . '">' . __( 'Settings', 'back-button-widget' ) . '</a>';
+
+		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=alg-back-button-settings' ) . '">' .
+			__( 'Settings', 'back-button-widget' ) .
+		'</a>';
+
 		if ( 'back-button-widget.php' === basename( ALG_BACK_BUTTON_WIDGET_FILE ) ) {
 			$custom_links[] = '<a target="_blank" style="font-weight: bold; color: green;" href="https://wpfactory.com/item/back-button-widget-wordpress-plugin/">' .
-				__( 'Go Pro', 'back-button-widget' ) . '</a>';
+				__( 'Go Pro', 'back-button-widget' ) .
+			'</a>';
 		}
+
 		return array_merge( $custom_links, $links );
+	}
+
+	/**
+	 * add_cross_selling_library.
+	 *
+	 * @version 1.7.0
+	 * @since   1.7.0
+	 */
+	function add_cross_selling_library() {
+
+		if ( ! class_exists( '\WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling' ) ) {
+			return;
+		}
+
+		$cross_selling = new \WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling();
+		$cross_selling->setup( array( 'plugin_file_path' => ALG_BACK_BUTTON_WIDGET_FILE ) );
+		$cross_selling->init();
+
 	}
 
 	/**
