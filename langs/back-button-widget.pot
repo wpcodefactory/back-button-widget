@@ -2,40 +2,35 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Back Button Widget 1.7.0\n"
+"Project-Id-Version: back-button-widget 1.7.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/back-button-widget\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-10T11:15:33+00:00\n"
+"POT-Creation-Date: 2025-10-03T22:09:31+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: back-button-widget\n"
 
 #. Plugin Name of the plugin
-#: back-button-widget.php
-msgid "Back Button Widget"
+msgid "Back Button Widget Pro"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: back-button-widget.php
 msgid "https://wpfactory.com/item/back-button-widget-wordpress-plugin/"
 msgstr ""
 
 #. Description of the plugin
-#: back-button-widget.php
 msgid "Back button widget for WordPress."
 msgstr ""
 
 #. Author of the plugin
-#: back-button-widget.php
 msgid "WPFactory"
 msgstr ""
 
 #. Author URI of the plugin
-#: back-button-widget.php
 msgid "https://wpfactory.com"
 msgstr ""
 
