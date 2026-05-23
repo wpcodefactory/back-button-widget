@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: back button widget, back button, back, go back
 Requires at least: 4.4
-Tested up to: 6.8
-Stable tag: 1.7.1
+Tested up to: 7.0
+Stable tag: 1.7.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -122,6 +122,9 @@ WPFactory has a diverse range of plugins tailored to enhance your experience:
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 1.7.2 - 23/05/2026 =
+* Tested up to: 7.0.
 
 = 1.7.1 - 03/10/2025 =
 * Dev - WPFactory Admin Menu - Library updated.
