@@ -2,19 +2,18 @@
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: back button widget, back button, back, go back
 Requires at least: 4.4
-Tested up to: 7.0
-Stable tag: 1.7.2
+Tested up to: 7.1
+Stable tag: 1.8.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A simple & customizable back button, add it to any WordPress page using shortcode or widget for enhanced user navigation experience and site accessibility.
+A simple & customizable back button, add it to any WordPress page using shortcode or widget for enhanced user navigation and site accessibility.
 
 == Description ==
 
 > “GREAT! WORKS PERFECT AND WONDERFUL SUPPORT: I needed a simple way to allow my clients to go back (BACK TO RESULTS) using my IDX real estate pages. The Back Button worked perfect and was easy to use. The Developer also was very kind to provide me with some additional code to match the rest of my web site colors.” – ⭐⭐⭐⭐⭐ [norwood451](https://wordpress.org/support/topic/great-works-perfect-and-wonderful-support/)
 
 [Main Page](https://wpfactory.com/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Main Page") | [Support Forum](https://wpfactory.com/support/item/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Support Forum") | [Documentation & How to](https://wpfactory.com/docs/back-button-widget-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Documentation & How to")
-
 
 Navigating through a website should be smooth sailing, right?
 
@@ -44,7 +43,6 @@ If you're more into customizing the button through shortcode, the plugin allows 
 ### 🚀 Font Awesome Support ###
 
 You can include any icon in your back button using simple addition to the shortcode, like `[alg_back_button fa="fas fa-angle-double-left"]`
-
 
 ___
 ## ❤️ User Testimonials: See What Others Are Saying!##
@@ -85,7 +83,7 @@ ___
 
 WPFactory has a diverse range of plugins tailored to enhance your experience:
 
-* [**Rename Media Files: Improve Your WordPress SEO**](https://wpfactory.com/item/file-renaming-on-upload-wordpress-plugin/ "**Rename Media Files: Improve Your WordPress SEO**"): Enhance SEO and organize media effortlessly with Rename Media Files WordPress Plugin. Fix upload issues, santize & optimize filenames, and improve SEO seamlessly. (**[Free version](https://wordpress.org/plugins/file-renaming-on-upload/ "Free version")**)
+* [**Rename Media Files: Improve Your WordPress SEO**](https://wpfactory.com/item/file-renaming-on-upload-wordpress-plugin/ "**Rename Media Files: Improve Your WordPress SEO**"): Enhance SEO and organize media effortlessly with Rename Media Files WordPress Plugin. Fix upload issues, sanitize & optimize filenames, and improve SEO seamlessly. (**[Free version](https://wordpress.org/plugins/file-renaming-on-upload/ "Free version")**)
 
 * [**Download Plugins and Themes from WordPress**](https://wpfactory.com/item/download-plugins-and-themes-from-dashboard-wordpress-plugin/?utm_source=wporg&utm_medium=organic&utm_campaign=readme "**Download Plugins and Themes from WordPress**"): Download installed plugins and themes in ZIP files directly from your WordPress admin dashboard, download any or all plugins & themes without FTP or cPanel access (**[Free version](https://wordpress.org/plugins/download-plugins-dashboard/ "Free version")**)
 
@@ -122,6 +120,17 @@ WPFactory has a diverse range of plugins tailored to enhance your experience:
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 1.8.0 - 05/10/2026 =
+* Dev - Output escaped.
+* Dev - Font Awesome - Load locally.
+* Dev - Settings - Plugin icon added.
+* Dev - Code refactoring.
+* Dev - Coding standards improved.
+* Dev - WPFactory Admin Menu - Library updated (to v1.1.2).
+* Dev - WPFactory Cross-Selling - Library updated (to v1.1.6).
+* Dev - WPFactory Key Manager - Library updated (to v1.1.1).
+* Tested up to: 7.1.
 
 = 1.7.2 - 23/05/2026 =
 * Tested up to: 7.0.
